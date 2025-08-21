@@ -12,11 +12,16 @@ def mostrar():
         print(lista)
         
         return lista
+def buscar():     
+    try:
+        opcion = input(f"{lista} que posicion escoges entre 0 y {len(lista) - 1}")
+        print(f"lista[opcion]")
+
+    except KeyError:
+        print("error")
+
 agregar()
 
-mostrar()       
-try:
-    opcion = input(f"{lista} que posicion escoges")
+mostrar()  
 
-except KeyError:
-    print("error")
+buscar()
